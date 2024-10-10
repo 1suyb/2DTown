@@ -7,7 +7,9 @@ public class Player : MonoBehaviour
 	private GameObject _characterMainSprite;
 	private TextMeshProUGUI _characterName;
 
-
+	private UnitLookAction _lookAction;
+	private UnitMoveAction _moveAction;
+	private HumanoidAnimationController _humanoidAnimationController;
 
 	private string _name;
 	private Defines.Gender _gender;
@@ -26,14 +28,14 @@ public class Player : MonoBehaviour
 		_characterName = this.gameObject.GetComponentInChildren<TextMeshProUGUI>();
 		_characterName.text = _name;
 
-		UnitLookAction look = this.gameObject.GetOrAddComponent<UnitLookAction>();
-		look.Bind();look.Init();
+		_lookAction = this.gameObject.GetOrAddComponent<UnitLookAction>();
+		_lookAction.Bind(); _lookAction.Init();
 
-		UnitMoveAction move = this.gameObject.GetComponent<UnitMoveAction>();
-		move.Bind(); move.Init();
+		_moveAction = this.gameObject.GetComponent<UnitMoveAction>();
+		_moveAction.Bind(); _moveAction.Init();
 
-		HumanoidAnimationController animator = this.gameObject.GetComponent<HumanoidAnimationController>();
-		animator.Bind();
+		_humanoidAnimationController = this.gameObject.GetComponent<HumanoidAnimationController>();
+		_humanoidAnimationController.Bind();
 
 		gameObject.SetActive(true);
 	}
@@ -65,6 +67,10 @@ public class Player : MonoBehaviour
 		{
 			Destroy(_characterMainSprite);
 			_characterMainSprite = Managers.Resource.Instantiate(GetUnitpath(), this.transform);
+			_characterMainSprite.transform.localPosition = Vector3.zero;
+
+			_lookAction.Bind(_characterMainSprite.GetComponent<SpriteRenderer>());
+			_humanoidAnimationController.Bind(_characterMainSprite.GetComponent<Animator>());
 		}
 	}
 	public string GetGenderInitial()

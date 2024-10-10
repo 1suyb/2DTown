@@ -30,6 +30,6 @@ public class UI_GameScene : UI_Scene
 
 	private void ChangeCharacter()
 	{
-		Managers.UI.OpenPopUp("CharacterSelecter");
+		Managers.UI.OpenPopUp("UserCharacterSelecter");
 	}
 }

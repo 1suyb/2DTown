@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2921719321541965349}
   - component: {fileID: 644581194807999587}
   - component: {fileID: 3560173058573490398}
+  - component: {fileID: -6805941904028820515}
   m_Layer: 5
   m_Name: GameScene
   m_TagString: Untagged
@@ -102,6 +103,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &-6805941904028820515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11161448765597079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5945b5f916b5a2049a15fc76038b4996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _changeNameButton: {fileID: 3438984023694127835}
+  _changeCharacterButton: {fileID: 2267292922069569079}
+  _displayAttendanceButton: {fileID: 6383259370320602233}
 --- !u!1 &950591140964146527
 GameObject:
   m_ObjectHideFlags: 0

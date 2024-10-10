@@ -21,5 +21,9 @@ public class UnitAnimationController : MonoBehaviour
 		_controller = gameObject.GetOrAddComponent<UnitController>();
 		_animator = gameObject.GetComponentInChildren<Animator>();
 	}
+	public void Bind(Animator animator)
+	{
+		_animator = animator;
+	}
 	
 }

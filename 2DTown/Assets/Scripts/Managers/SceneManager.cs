@@ -5,6 +5,7 @@ public class SceneManagerW
 	public BaseScene CurrentScene { get; private set; }
 	public void LoadScene(Defines.Scene type)
 	{
+		Clear();
 		SceneManager.LoadScene(GetSceneName(type));
 	}
 	public string GetSceneName(Defines.Scene type) 
@@ -14,5 +15,9 @@ public class SceneManagerW
 	public void SetCurrentScene(BaseScene scene)
 	{
 		CurrentScene = scene;
+	}
+	public void Clear()
+	{
+		Managers.Clear();
 	}
 }
