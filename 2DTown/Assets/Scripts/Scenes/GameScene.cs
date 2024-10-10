@@ -9,6 +9,6 @@ public class GameScene : BaseScene
 		Managers.GameManager.Player.Init();
 
 		Managers.UI.OpenSceneUI("GameScene");
-
+		Managers.UI.OpenSceneUI("Timer");
 	}
 }
