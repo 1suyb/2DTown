@@ -35,7 +35,7 @@ public class UI_GameStart : UI_Scene
 
 	private void SetSprite()
 	{
-		_characterSprite.sprite = Managers.Resource.Load<Sprite>(_player.GetSpritePath());
+		_characterSprite.sprite = Managers.Resource.Load<Sprite>($"Sprites/{_player.UnitTypeString}");
 	}
 
 	private void OpenNameSetter()
@@ -51,12 +51,12 @@ public class UI_GameStart : UI_Scene
 
 	public void GameStart()
 	{
-		if (!Utils.IsAvailableName(_player.Name))
+		if (!_player.HasRightName)
 		{
 			_warringMessage.text = "캐릭터 이름을 설정해주세요";
 			return; 
 		}
-		if (_player.CharacterType == Defines.CharacterType.Unknown)
+		if (!_player.HasRightUnitType)
 		{
 			_warringMessage.text = "캐릭터를 설정해주세요";
 			return;

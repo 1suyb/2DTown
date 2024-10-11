@@ -6,16 +6,6 @@ public class UnitLookAction : MonoBehaviour
 	private UnitController _controller;
 	private SpriteRenderer _spriteRenderer;
 
-
-	private void Awake()
-	{
-		Bind();
-	}
-	private void Start()
-	{
-		Init();
-	}
-
 	public void Bind()
 	{
 		_controller = gameObject.GetOrAddComponent<UnitController>();

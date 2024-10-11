@@ -7,7 +7,7 @@ public class Defines
 		InitScene,
 		GameScene,
 	}
-	public enum CharacterType
+	public enum UnitSpecies
 	{
 		Unknown = -1,
 		Dwarf,

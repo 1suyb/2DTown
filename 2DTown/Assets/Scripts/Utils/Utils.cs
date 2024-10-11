@@ -22,4 +22,8 @@ public static class Utils
 	{
 		return !IsContainsSpecialCharacters(str) && (str.Length>0);
 	}
+	public static string GenderToString(Defines.Gender gender) 
+	{ 
+		return gender == Defines.Gender.Female ? "f" : "m";
+	}
 }

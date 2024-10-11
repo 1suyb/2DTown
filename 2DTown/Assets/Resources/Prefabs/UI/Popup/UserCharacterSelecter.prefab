@@ -389,7 +389,7 @@ MonoBehaviour:
   _female: {fileID: 444366039221859431}
   _male: {fileID: 6574934957637539044}
   _layout: {fileID: 8420754233568270856}
-  StartButton: {fileID: 4531182148329421667}
+  _startButton: {fileID: 4531182148329421667}
 --- !u!1 &4413220362475416195
 GameObject:
   m_ObjectHideFlags: 0

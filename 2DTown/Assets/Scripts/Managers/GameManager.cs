@@ -22,8 +22,8 @@ public class GameManager
 	{
 		GameObject player = Managers.Resource.Instantiate("PlayerCharacter");
 		_player = player.GetOrAddComponent<Player>();
-		player.SetActive(false);
 		GameObject.DontDestroyOnLoad(player);
+		player.SetActive(false);
 	}
 
 
