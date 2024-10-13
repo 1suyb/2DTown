@@ -22,5 +22,10 @@ public class Defines
 		Female,
 		male,
 	}
+    public enum  Tags
+    {
+        Player,
+		NPC
+    }
 }
 

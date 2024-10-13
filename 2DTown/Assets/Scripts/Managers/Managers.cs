@@ -16,12 +16,16 @@ public class Managers : MonoBehaviour
 	private SceneManagerW _scene = new SceneManagerW();
 	private UIManager _ui = new UIManager();
 	private ResourceManager _resource = new ResourceManager();
+	private DataManger _data = new DataManger();
+	private SpawnManager _spawner = new SpawnManager();
 	#endregion
 
 	#region Managers Property
 	public static SceneManagerW Scene { get { return Instacne._scene; } }
 	public static UIManager UI { get { return Instacne._ui; } }
 	public static ResourceManager Resource { get { return Instacne._resource; } }
+	public static DataManger Data { get { return Instacne._data; } }
+	public static SpawnManager Spawner { get {return Instacne._spawner; } }
 	#endregion
 
 	private static void Init()
@@ -38,6 +42,7 @@ public class Managers : MonoBehaviour
 			_instacne = gm.GetOrAddComponent<Managers>();
 
 			_instacne._ui.Init();
+			_instacne._data.Init();
 		}
 		
 	}

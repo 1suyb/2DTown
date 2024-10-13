@@ -11,10 +11,13 @@ public class GameScene : BaseScene
 		GameObject camera = Managers.Resource.Instantiate("GameCamera");
 		camera.GetOrAddComponent<CameraController>().SetPlayer(player);
 
-		
-		
-
 		Managers.UI.OpenSceneUI("GameScene");
 		Managers.UI.OpenSceneUI("Timer");
+
+		foreach(string id in Managers.Data.NPCDB.Keys)
+		{
+			Managers.Spawner.NPCSpawn(id);
+		}
+
 	}
 }
