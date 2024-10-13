@@ -21,7 +21,7 @@ public class SpawnManager
 		npcComponent.SetName(data.Name);
 		npcComponent.Bind(); npcComponent.Init();
 
-		return null;
+		return npc;
 	}
 	public void CreateNPCParent()
 	{

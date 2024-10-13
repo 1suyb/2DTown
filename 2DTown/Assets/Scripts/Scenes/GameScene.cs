@@ -16,7 +16,8 @@ public class GameScene : BaseScene
 
 		foreach(string id in Managers.Data.NPCDB.Keys)
 		{
-			Managers.Spawner.NPCSpawn(id);
+			GameObject npc = Managers.Spawner.NPCSpawn(id);
+			Managers.GameManager.Attendance(npc.GetComponent<NPC>());
 		}
 
 	}

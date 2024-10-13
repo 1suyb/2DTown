@@ -20,7 +20,7 @@ public class UI_GameScene : UI_Scene
 
 	private void OpenAttendanceList()
 	{
-		
+		Managers.UI.OpenPopUp("AttandanceList");
 	}
 
 	private void changeName()
