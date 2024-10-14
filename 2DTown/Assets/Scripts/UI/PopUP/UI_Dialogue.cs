@@ -13,7 +13,7 @@ public class UI_Dialogue : UI_Popup
 
 	public override void Init()
 	{
-		_close.onClick.AddListener(Close);
+		_close.onClick.AddListener(Managers.UI.ClosePopUp);
 	}
 
 	public void Init(string name, string dialogue)

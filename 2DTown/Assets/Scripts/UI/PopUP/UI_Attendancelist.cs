@@ -11,7 +11,7 @@ public class UI_Attendancelist : UI_Popup
 	public override void Init()
 	{
 		base.Init();
-		_closeButton.onClick.AddListener(Close);
+		_closeButton.onClick.AddListener(Managers.UI.ClosePopUp);
 		CreateList();
 	}
 

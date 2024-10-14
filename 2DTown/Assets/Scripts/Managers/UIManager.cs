@@ -74,9 +74,12 @@ public class UIManager
 
 	public void ClosePopUp()
 	{
-		UI_Popup popup = UI_popups.Pop();
-		popup.gameObject.SetActive(false);
-		_sort--;
+		if(UI_popups.Count > 0)
+		{
+			UI_Popup popup = UI_popups.Pop();
+			popup.gameObject.SetActive(false);
+			_sort--;
+		}
 	}
 
 	public void Clear()

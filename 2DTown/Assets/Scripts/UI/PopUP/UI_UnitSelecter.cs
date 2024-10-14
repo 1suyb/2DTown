@@ -73,7 +73,7 @@ public class UI_UnitSelecter : UI_Popup
 		}
 		Managers.GameManager.Player.SetUnitType(SelectedGender, SelectedCharacterType);
 		CallResponse();
-		Close();
+		Managers.UI.ClosePopUp();
 	}
 	public override void Close()
 	{

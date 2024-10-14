@@ -7,8 +7,10 @@ public class PlayerInteractionAction : UnitInteractAction
 
 	public override void OnInteract()
 	{
-		_nearNPC.Interact();
-		Debug.Log("힝구");
+		if( _nearNPC != null)
+			_nearNPC.gameObject.GetComponent<UnitController>().CallInteract();
+
+		
 	}
 
 	private void OnTriggerEnter2D(UnityEngine.Collider2D collision)
@@ -23,6 +25,7 @@ public class PlayerInteractionAction : UnitInteractAction
 		if (collision.CompareTag(_npcTag))
 		{
 			_nearNPC = null;
+			Managers.UI.ClosePopUp();
 		}
 	}
 

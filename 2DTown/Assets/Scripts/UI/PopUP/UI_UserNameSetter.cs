@@ -49,7 +49,7 @@ public class UI_UserNameSetter : UI_Popup
 		}
 		Managers.GameManager.Player.SetName(name);
 		CallResponse();
-		Close();
+		Managers.UI.ClosePopUp();
 	}
 
 	public void AddListener(UnityAction action)

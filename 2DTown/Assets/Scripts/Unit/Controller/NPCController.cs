@@ -24,15 +24,6 @@ public class NPCController : UnitController
 		_interactionHint.gameObject.SetActive(false);
 	}
 
-	public void OnInteract()
-	{
-		Debug.Log("npc");
-		UI_Dialogue dialogue = Managers.UI.OpenPopUp("NPCDialogue") as UI_Dialogue;
-		NPC data = this.gameObject.GetComponent<NPC>();
-		dialogue.Init(data.Name, "Test");
-
-	}
-
 	private void OnTriggerEnter2D(UnityEngine.Collider2D collision)
 	{
 		if (collision.CompareTag(_playerTag))

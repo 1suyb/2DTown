@@ -26,13 +26,9 @@ public class NPC : Unit
 	{
 		base.Init();
 		_npcController.Bind(); _npcController.Init();
+		_interactionAction.Bind(); _interactionAction.Init();
 		this.gameObject.tag = Defines.Tags.NPC.ToString();
 		_nameUI.text = Name;
-	}
-
-	public void Interact()
-	{
-		_npcController.OnInteract();
 	}
 
 }
